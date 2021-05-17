@@ -7,7 +7,7 @@ const ImageRow = ({ images }) => {
     <Grid container spacing={2}>
       {images.map((image) => {
         return (
-          <Grid item sm={4} key={image.id}>
+          <Grid item sm={4} xs={6} key={image.id}>
             <ImageCard image={image} />
           </Grid>
         );
