@@ -12,17 +12,16 @@ const Pixabay = () => {
 
   // Useeffect
   useEffect(() => {
+    // get images function
+    const getImages = async () => {
+      const res = await axios.get(
+        `https://pixabay.com/api/?key=21627888-43a3e6e7a1b2ad88b3cffd600&q=${inputText}&image_type=photo&per_page=${selectVal}`
+      );
+
+      setImages(res.data.hits);
+    };
     getImages();
   }, [inputText, selectVal]);
-
-  // get images function
-  const getImages = async () => {
-    const res = await axios.get(
-      `https://pixabay.com/api/?key=21627888-43a3e6e7a1b2ad88b3cffd600&q=${inputText}&image_type=photo&per_page=${selectVal}`
-    );
-
-    setImages(res.data.hits);
-  };
 
   // On Input Change
   const onInputChange = (e) => {
