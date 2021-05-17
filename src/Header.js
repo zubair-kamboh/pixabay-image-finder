@@ -37,7 +37,7 @@ const Header = () => {
             </Link>
           </Button>
         </div>
-        <Button color="primary" variant="contained">
+        <Button color="secondery" variant="contained">
           Login
         </Button>
       </Toolbar>
